@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home - Passport Application</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Passport Application</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item text-">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Application Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="text-center">
+            <h2>Welcome, [User's Name]!</h2>
+            <p>Here you can manage your passport application, check your status, and update your profile.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="d-flex flex-column card-body justify-content-center">
+                        <h5 class="card-title">Profile Information</h5>
+                        <p class="card-text">Update your personal details and ensure your information is up-to-date.</p>
+                        <a href="#" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card" onclick="location.href='application_status.html';" style="cursor: pointer;">
+                    <div class=" d-flex flex-column card-body justify-content-center">
+                        <h5 class="card-title">Application Status</h5>
+                        <p class="card-text">Check the current status of your passport application and view any updates.</p>
+                        <a href="application_status.html" class="btn btn-primary">View Status</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card" onclick="location.href='apply_passport.html';" style="cursor: pointer;">
+                    <div class="d-flex flex-column card-body justify-content-center">
+                        <h5 class="card-title">Apply for Passport</h5>
+                        <p class="card-text">Fill out the application form to apply for a new passport.</p>
+                        <a href="apply_passport.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card" onclick="location.href='renewal_form.html';" style="cursor: pointer;">
+                    <div class="d-flex flex-column card-body justify-content-center">
+                        <h5 class="card-title">Renew Passport</h5>
+                        <p class="card-text">Fill out the application form to apply for passport renewal.</p>
+                        <a href="renewal_form.html" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card">
+                    <div class="d-flex flex-column card-body justify-content-center">
+                        <h5 class="card-title">Important Notices</h5>
+                        <p class="card-text">Stay informed with the latest news and updates regarding passport applications.</p>
+                        <a href="#" class="btn btn-primary">Read Notices</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card" onclick="location.href='feedback.html';" style="cursor: pointer;">
+                    <div class="d-flex flex-column card-body justify-content-center">
+                        <h5 class="card-title">Give Feedback</h5>
+                        <p class="card-text">Please give feedback.</p>
+                        <a href="feedback.html" class="btn btn-primary">Fill now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

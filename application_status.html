@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Application Status</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e9f0f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        label {
+            font-weight: bold;
+        }
+        .form-control {
+            margin-top: 5px;
+        }
+        .btn-primary {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .status-container {
+            margin-top: 20px;
+        }
+        .status-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border-left: 4px solid #007bff;
+        }
+        .status-item p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Passport Application Status</h1>
+        <form id="statusForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="applicationNumber">Application Number</label>
+                <input type="text" class="form-control" id="applicationNumber" name="applicationNumber" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Check Status</button>
+        </form>
+
+        <div class="status-container">
+            <!-- This is a sample status item, it will be dynamically populated based on the user's search -->
+            <div class="status-item">
+                <p><strong>Application Number:</strong> ABC123456789</p>
+                <p><strong>Status:</strong> Processing</p>
+                <p><strong>Last Updated:</strong> June 5, 2024</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

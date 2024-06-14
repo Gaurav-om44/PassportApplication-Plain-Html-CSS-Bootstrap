@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renew Passport</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .form-section {
+            margin-bottom: 40px;
+        }
+        .form-section h2 {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="date"], input[type="email"], select, textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .form-navigation {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .form-navigation button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .form-navigation button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Passport Renewal Application Form</h1>
+        <form id="renewPassportForm">
+            <!-- Section 1: Service Required -->
+            <div class="form-section" id="section1">
+                <h2>Service Required</h2>
+                <label for="serviceRequired">Applying for:</label>
+                <select id="serviceRequired" name="serviceRequired" required>
+                    <option value="Renewal of Passport">Renewal of Passport</option>
+                </select>
+                <label>If renewal, specify reason(s):</label>
+                <input type="checkbox" id="validityExpire" name="renewalReason" value="Validity Expired within 3 years/ Due to Expire">
+                <label for="validityExpire">Validity Expired within 3 years/ Due to Expire</label>
+                <input type="checkbox" id="pagesExhausted" name="renewalReason" value="Exhaustion of Pages">
+                <label for="pagesExhausted">Exhaustion of Pages</label>
+                <input type="checkbox" id="lostPassport" name="renewalReason" value="Lost Passport">
+                <label for="lostPassport">Lost Passport</label>
+                <input type="checkbox" id="damagedPassport" name="renewalReason" value="Damaged Passport">
+                <label for="damagedPassport">Damaged Passport</label>
+                <label for="typeApplication">Type of Application:</label>
+                <select id="typeApplication" name="typeApplication" required>
+                    <option value="Normal">Normal</option>
+                    <option value="Tatkaal">Tatkaal</option>
+                </select>
+                <label for="bookletType">Type of Passport Booklet:</label>
+                <select id="bookletType" name="bookletType" required>
+                    <option value="36 Pages">36 Pages</option>
+                    <option value="60 Pages">60 Pages</option>
+                </select>
+                <label for="validityRequired">Validity Required:</label>
+                <select id="validityRequired" name="validityRequired" required>
+                    <option value="10 Years">10 Years</option>
+                    <option value="Up to age 18">Up to age 18</option>
+                </select>
+            </div>
+
+            <!-- Section 2: Applicant Details -->
+            <div class="form-section" id="section2">
+                <h2>Applicant Details</h2>
+                <label for="givenName">Given Name:</label>
+                <input type="text" id="givenName" name="givenName" required>
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+                <label for="otherNames">Are you known by any other names (aliases)?</label>
+                <select id="otherNames" name="otherNames" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                <label for="nameChanged">Have you ever changed your name?</label>
+                <select id="nameChanged" name="nameChanged" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                <label for="dob">Date of Birth (DD-MM-YYYY):</label>
+                <input type="date" id="dob" name="dob" required>
+                <label for="placeOfBirth">Place of Birth:</label>
+                <input type="text" id="placeOfBirth" name="placeOfBirth" required>
+                <label for="district">District:</label>
+                <input type="text" id="district" name="district" required>
+                <label for="state">State/ UT:</label>
+                <input type="text" id="state" name="state" required>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Transgender">Transgender</option>
+                </select>
+                <label for="maritalStatus">Marital Status:</label>
+                <select id="maritalStatus" name="maritalStatus" required>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widow/Widower">Widow/Widower</option>
+                    <option value="Separated">Separated</option>
+                </select>
+                <label for="citizenship">Citizenship of India by:</label>
+                <select id="citizenship" name="citizenship" required>
+                    <option value="Birth">Birth</option>
+                    <option value="Descent">Descent</option>
+                    <option value="Registration/Naturalization">Registration/Naturalization</option>
+                </select>
+                <label for="pan">PAN (If available):</label>
+                <input type="text" id="pan" name="pan">
+                <label for="voterId">Voter ID (If available):</label>
+                <input type="text" id="voterId" name="voterId">
+                <label for="employment">Employment Type:</label>
+                <select id="employment" name="employment" required>
+                    <option value="PSU">PSU</option>
+                    <option value="Government">Government</option>
+                    <option value="Statutory Body">Statutory Body</option>
+                    <option value="Retired Government Servant">Retired Government Servant</option>
+                    <option value="Self Employed">Self Employed</option>
+                    <option value="Private">Private</option>
+                    <option value="Homemaker">Homemaker</option>
+                    <option value="Not Employed">Not Employed</option>
+                    <option value="Retired-Private Service">Retired-Private Service</option>
+                    <option value="Student">Student</option>
+                    <option value="Others">Others</option>
+                </select>
+                <label for="orgName">If employed in Government/ Statutory Body/ PSU, specify organization name:</label>
+                <input type="text" id="orgName" name="orgName">
+                <label for="parentGovtServant">Is either of your parent (in case of minor)/ spouse, a government servant?</label>
+                <select id="parentGovtServant" name="parentGovtServant" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                <label for="education">Educational Qualification:</label>
+                <select id="education" name="education" required>
+                    <option value="7th pass or less">7th pass or less</option>
+                    <option value="Between 8th and 9th Standard">Between 8th and 9th Standard</option>
+                    <option value="10th pass and above">10th pass and above</option>
+                    <option value="Graduate and above">Graduate and above</option>
+                </select>
+                <label for="nonEcr">Are you eligible for Non-ECR category?</label>
+                <select id="nonEcr" name="nonEcr" required>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <!-- Section 3: Family Details -->
+            <div class="form-section" id="section3">
+                <h2>Family Details</h2>
+                <label for="fatherName">Father's Given Name:</label>
+                <input type="text" id="fatherName" name="fatherName" required>
+                <label for="fatherSurname">Father's Surname:</label>
+                <input type="text" id="fatherSurname" name="fatherSurname" required>
+                <label for="motherName">Mother's Given Name:</label>
+                <input type="text" id="motherName" name="motherName" required>
+                <label for="motherSurname">Mother's Surname:</label>
+                <input type="text" id="motherSurname" name="motherSurname" required>
+                <label for="legalGuardianName">Legal Guardian's Given Name (if applicable):</label>
+                <input type="text" id="legalGuardianName" name="legalGuardianName">
+                <label for="legalGuardianSurname">Legal Guardian's Surname:</label>
+                <input type="text" id="legalGuardianSurname" name="legalGuardianSurname">
+                <label for="spouseName">Spouse's Given Name (if married):</label>
+                <input type="text" id="spouseName" name="spouseName">
+                <label for="spouseSurname">Spouse's Surname:</label>
+                <input type="text" id="spouseSurname" name="spouseSurname">
+            </div>
+
+            <!-- Section 4: Present Residential Address -->
+            <div class="form-section" id="section4">
+                <h2>Present Residential Address</h2>
+                <label for="houseNo">House No. and Street Name:</label>
+                <input type="text" id="houseNo" name="houseNo" required>
+                <label for="village">Village/ Town/ City:</label>
+                <input type="text" id="village" name="village" required>
+                <label for="districtPresent">District:</label>
+                <input type="text" id="districtPresent" name="districtPresent" required>
+                <label for="statePresent">State/ UT:</label>
+                <input type="text" id="statePresent" name="statePresent" required>
+                <label for="pinCode">Pin Code:</label>
+                <input type="text" id="pinCode" name="pinCode" required>
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Section 5: Emergency Contact -->
+            <div class="form-section" id="section5">
+                <h2>Emergency Contact</h2>
+                <label for="emergencyName">Name and Address:</label>
+                <textarea id="emergencyName" name="emergencyName" required></textarea>
+                <label for="emergencyPhone">Phone Number:</label>
+                <input type="text" id="emergencyPhone" name="emergencyPhone" required>
+                <label for="emergencyEmail">Email:</label>
+                <input type="email" id="emergencyEmail" name="emergencyEmail">
+            </div>
+
+            <!-- Section 6: Previous Passport/ Application Details -->
+            <div class="form-section" id="section6">
+                <h2>Previous Passport/ Application Details</h2>
+                <label for="prevPassportNum">Previous Passport Number:</label>
+                <input type="text" id="prevPassportNum" name="prevPassportNum">
+                <label for="prevIssueDate">Date of Issue:</label>
+                <input type="date" id="prevIssueDate" name="prevIssueDate">
+                <label for="prevExpiryDate">Date of Expiry:</label>
+                <input type="date" id="prevExpiryDate" name="prevExpiryDate">
+                <label for="prevIssuePlace">Place of Issue:</label>
+                <input type="text" id="prevIssuePlace" name="prevIssuePlace">
+                <label for="prevFileNum">File Number:</label>
+                <input type="text" id="prevFileNum" name="prevFileNum">
+            </div>
+
+            <!-- Section 7: Self-Declaration -->
+            <div class="form-section" id="section7">
+                <h2>Self-Declaration</h2>
+                <label for="selfDeclaration">I hereby declare that:</label>
+                <textarea id="selfDeclaration" name="selfDeclaration" required></textarea>
+            </div>
+
+            <div class="form-navigation">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
